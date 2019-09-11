@@ -1,0 +1,19 @@
+<% if @image.errors.any? %>
+	<div class="alert alert-danger">
+		<h4 class="alert-heading">oh no!</h4>
+		<p>Ha ocurrido un error</p>
+	</div>
+
+<% end %>
+
+<div class="form-group">
+	<%= form_for @image do |f|  %>
+		<%= f.label :description %><br>
+		<%= f.text_field :description, class: 'form_control', required: true%>
+		<br>
+		<%= f.label :picture %><br>
+		<%= f.file_field :picture, required: true%>
+		<br>
+		<%= f.submit "Enviar", :class => "btn btn-primary"%>
+	<% end %>
+</div>

@@ -1,0 +1,10 @@
+
+<div class="col-sm">
+	<figure class="figure">
+	  <%= image_tag image.picture.thumb.url, class: 'figure-img img-fluid rounded'%>
+	  <!img src="https://areajugones.sport.es/wp-content/uploads/2019/05/one-punch-man-5-2.jpg" class="figure-img img-fluid rounded" >
+	  <figcaption class="figure-caption"> <%= image.description %> 
+		<%= link_to 'Edit', edit_image_path(image) %>
+		<%= link_to 'Destroy', image, method: :delete, data: {confirm: 'sure?'} %></figcaption>
+	</figure>
+</div>

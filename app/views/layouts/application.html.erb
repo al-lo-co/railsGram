@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsGram</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <ul class="nav justify-content-end">
+      <%- if user_signed_in? %>
+        <li class="nav-itel">
+          <%= link_to 'Salir', destroy_user_session_path,method: :delete %>
+        </li>
+
+      <% else %>
+        <li class="nav-itel">
+          <%= link_to 'Entrar', new_user_session_path  %>
+        </li> <br>
+        <li class="nav-itel">
+          <%= link_to 'Registrarse', new_user_registration_path  %>
+        </li>
+      <% end %>
+      
+    </ul>
+    <div class="container">
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+    </div>
+  </body>
+</html>
