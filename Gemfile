@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 #gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 2.1'
 
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
